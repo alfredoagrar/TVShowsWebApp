@@ -1,1 +1,7 @@
-<p-button label="Submit" />
+<h1>TV Shows</h1>
+<ul>
+  <li *ngFor="let show of tvShows">
+    {{ show.name }} (Favorite: {{ show.favorite }})
+  </li>
+</ul>
+<button (click)="createTVShow()">Create New Show</button>

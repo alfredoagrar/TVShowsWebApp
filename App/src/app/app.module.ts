@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ButtonModule } from 'primeng/button';
+import { HttpClientModule } from '@angular/common/http';
+import { TvShowsServiceService } from './services/tv-shows-service.service';
 
 
 
@@ -14,9 +15,9 @@ import { ButtonModule } from 'primeng/button';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ButtonModule 
+    HttpClientModule
   ],
-  providers: [],
+  providers: [TvShowsServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
